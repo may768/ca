@@ -233,22 +233,8 @@ document.addEventListener("DOMContentLoaded", () => {
     imgObserver.observe(img);
   });
 
-  // 23️⃣ Random emoji in title every few seconds
-  const emojis = ["🌍", "✈️", "📷", "🏝️", "🗺️", "🧳"];
-  setInterval(() => {
-    const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
-    document.title = `${randomEmoji} ${document.title.replace(/^[^\s]+/, '').trim()}`;
-  }, 4000);
 
-  // 24️⃣ Rain animation effect (canvas)
-  const canvas = document.createElement("canvas");
-  canvas.id = "rain-canvas";
-  document.body.appendChild(canvas);
 
-  Object.assign(canvas.style, {
-    position: "fixed", top: 0, left: 0, pointerEvents: "none",
-    zIndex: 1, width: "100%", height: "100%", opacity: "0.2"
-  });
 
   const ctx = canvas.getContext("2d");
   const w = window.innerWidth;
