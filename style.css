@@ -1,3 +1,4 @@
+
 /* Reset & Font */
 * {
   margin: 0;
@@ -35,7 +36,8 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 5rem;
+  margin-right: 10px; /* ✅ Add this line */
 }
 
 .logo img {
@@ -59,7 +61,9 @@ header {
 
 /* Main Hero Text */
 main {
-  max-width: 600px;
+  text-align: right;
+  padding-left: 10px;
+  
 }
 
 main h1 {
