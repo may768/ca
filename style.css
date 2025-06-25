@@ -175,6 +175,7 @@ footer span {
   display: block;
 }
 .hero {
+  
   background: radial-gradient(circle at bottom right, #4a00e0, #19002d);
 }
 .hero {
@@ -182,6 +183,7 @@ footer span {
   height: 100vh;
   overflow: hidden;
 }
+
 #bg {
   position: absolute;
   inset: 0;
@@ -239,19 +241,16 @@ footer span {
   padding: 1rem;
 }
 
-   .logo {
+.logo {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  justify-content: flex-start;
-  margin-right: auto;
-  flex-wrap: nowrap;         /* prevents wrapping */
-  white-space: nowrap;       /* prevents text from breaking into a new line */
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align text and image to the left */
+  gap: 0.5rem; /* Space between logo image and text */
 }
 
 
     .logo img {
-      height: 200px;
+      height: 100px;
     }
     .logo span {
       font-size: 1.1rem;
