@@ -7,11 +7,13 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #0c0018;
+  background: url('gallery/bg1.png') no-repeat center center fixed;
+  background-size: cover;
   color: white;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 
 /* Header */
 .team-header {
@@ -47,13 +49,19 @@ body {
 }
 
 .team-section h1 {
-  font-size: 4rem;
-  margin-bottom: 0.5rem;
+  font-size: 3.5rem;
+  margin-bottom: 0.2rem;
+  background: linear-gradient(to right, #ff00cc, #3333ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(255, 0, 255, 0.1);
 }
 
 .subtitle {
-  color: #aaa;
-  font-size: 2rem;
+  color: #ccc;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  opacity: 0.8;
   margin-bottom: 2rem;
 }
 
@@ -69,17 +77,21 @@ body {
 
 /* Team Member Card */
 .team-member {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1.2rem;
-  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 18px;
   text-align: center;
   width: 90%;
   max-width: 1000px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
 .team-member:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(155, 89, 182, 0.3);
 }
 
 .team-member img {
@@ -137,19 +149,44 @@ body {
   color: white;
   font-size: 1rem;
   text-decoration: none;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .icons a:hover {
   transform: scale(1.2);
-  background: rgba(255, 255, 255, 0.2);
+  background: #9b59b6;
+  box-shadow: 0 0 12px #9b59b6;
 }
 
 /* Footer */
 .team-footer {
   text-align: center;
   padding: 2rem;
-  background: #090014;
-  font-size: 0.9rem;
-  color: #aaa;
+  background: linear-gradient(to right, #0c0018, #1a0033);
+  font-size: 0.85rem;
+  color: #bbb;
+  border-top: 1px solid #222;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .zigzag-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .member2,
+  .member3,
+  .member4,
+  .member5,
+  .member6 {
+    margin-top: 0;
+  }
+
+  .team-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
 }
