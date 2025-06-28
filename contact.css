@@ -7,8 +7,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: url('gallery/06.jpeg') no-repeat center center fixed;
-  background-size: cover;
+  background: #8b0000; /* 🔴 Dark Red background */
   color: white;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -35,18 +34,18 @@ body {
   display: block;
   width: 80px;
   height: 4px;
-  background: #ff1a1a; /* underline in red */
+  background: white;
   margin: 0.5rem auto;
   border-radius: 2px;
 }
 
 .contact-subtitle {
   text-align: center;
-  color: #f8f8f8;
+  color: white;
   margin-bottom: 3rem;
   font-size: 1.15rem;
   font-weight: 500;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 /* Main Box Container */
@@ -54,7 +53,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  background: rgba(139, 0, 0, 0.9); /* dark red background */
+  background: #a52a2a; /* 🔴 Red Panel */
   padding: 2rem;
   border-radius: 16px;
 }
@@ -62,15 +61,17 @@ body {
 /* Left and Right Columns */
 .contact-left, .contact-right {
   flex: 1 1 400px;
-  background: #8b0000; /* deep red */
+  background: #a52a2a; /* 🔴 Red tone */
   padding: 2rem;
   border-radius: 12px;
 }
 
 /* Left Box - Info */
-.contact-left h2 {
+.contact-left h2,
+.contact-right h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .contact-left p {
@@ -81,15 +82,15 @@ body {
 }
 
 .contact-left i {
-  color: #ff4d4d; /* lighter red */
+  color: white;
 }
 
 .contact-left a {
-  color: #f1f1f1;
+  color: white;
   text-decoration: none;
 }
 
-/* Social Icons */
+/* Social Icons - Same Color */
 .socials {
   margin: 1.5rem 0 1rem 0;
   display: flex;
@@ -100,17 +101,18 @@ body {
 .socials a {
   font-size: 1.2rem;
   color: white;
-  background: #a30000;
+  background: #800000; /* Dark red circles */
   padding: 0.7rem;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .socials a:hover {
-  background: #ff1a1a;
+  background: #ff0000;
+  transform: scale(1.1);
 }
 
 /* Map Styling */
@@ -118,6 +120,7 @@ body {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   font-size: 1.2rem;
+  color: white;
 }
 
 .contact-left iframe {
@@ -127,12 +130,7 @@ body {
   border-radius: 10px;
 }
 
-/* Right Box - Form */
-.contact-right h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
+/* Form Styling */
 .contact-right form {
   display: flex;
   flex-direction: column;
@@ -152,7 +150,7 @@ body {
 .contact-right textarea {
   width: 100%;
   padding: 0.9rem;
-  background: #a30000;
+  background: #800000;
   border: none;
   border-radius: 8px;
   color: white;
@@ -166,27 +164,28 @@ body {
 
 .contact-right button {
   padding: 1rem;
-  background: #ff1a1a;
-  color: white;
+  background: white;
+  color: #8b0000;
   border: none;
   border-radius: 25px;
   font-weight: bold;
   cursor: pointer;
   font-size: 1rem;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .contact-right button:hover {
-  background: #cc0000;
+  background: #ffcccc;
+  color: #5e0000;
 }
 
 /* Footer */
 .team-footer {
   text-align: center;
   padding: 2rem;
-  background: #440000;
+  background: #660000;
   font-size: 0.9rem;
-  color: #eee;
+  color: white;
 }
 
 /* Mobile Responsive */
@@ -211,4 +210,27 @@ body {
   .contact-left, .contact-right {
     padding: 1.5rem;
   }
+}
+/* Make all input and textarea placeholder text white */
+::placeholder {
+  color: white;
+  opacity: 1; /* ensure full white, not faded */
+}
+
+/* For older browser compatibility */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: white;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: white;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: white;
+}
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: white;
 }
