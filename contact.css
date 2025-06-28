@@ -7,8 +7,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #0c0018;
-  background: url('gallery/09.png') no-repeat center center fixed;
+  background: url('gallery/06.jpeg') no-repeat center center fixed;
   background-size: cover;
   color: white;
   scroll-behavior: smooth;
@@ -36,27 +35,26 @@ body {
   display: block;
   width: 80px;
   height: 4px;
-  background: #8f00ff;
+  background: #ff1a1a; /* underline in red */
   margin: 0.5rem auto;
   border-radius: 2px;
 }
 
 .contact-subtitle {
   text-align: center;
-  color: #f0f0f0;          /* Brighter text color */
+  color: #f8f8f8;
   margin-bottom: 3rem;
   font-size: 1.15rem;
-  font-weight: 500;         /* Slightly bolder */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);  /* Improves visibility on bright backgrounds */
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
 }
-
 
 /* Main Box Container */
 .contact-box {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  background: #121528;
+  background: rgba(139, 0, 0, 0.9); /* dark red background */
   padding: 2rem;
   border-radius: 16px;
 }
@@ -64,7 +62,7 @@ body {
 /* Left and Right Columns */
 .contact-left, .contact-right {
   flex: 1 1 400px;
-  background: #1b1f34;
+  background: #8b0000; /* deep red */
   padding: 2rem;
   border-radius: 12px;
 }
@@ -83,11 +81,11 @@ body {
 }
 
 .contact-left i {
-  color: #8f00ff;
+  color: #ff4d4d; /* lighter red */
 }
 
 .contact-left a {
-  color: #ccc;
+  color: #f1f1f1;
   text-decoration: none;
 }
 
@@ -102,7 +100,7 @@ body {
 .socials a {
   font-size: 1.2rem;
   color: white;
-  background: #2b2f4a;
+  background: #a30000;
   padding: 0.7rem;
   border-radius: 50%;
   display: inline-flex;
@@ -112,7 +110,7 @@ body {
 }
 
 .socials a:hover {
-  background: #8f00ff;
+  background: #ff1a1a;
 }
 
 /* Map Styling */
@@ -154,7 +152,7 @@ body {
 .contact-right textarea {
   width: 100%;
   padding: 0.9rem;
-  background: #2a2d45;
+  background: #a30000;
   border: none;
   border-radius: 8px;
   color: white;
@@ -168,7 +166,7 @@ body {
 
 .contact-right button {
   padding: 1rem;
-  background: #8f00ff;
+  background: #ff1a1a;
   color: white;
   border: none;
   border-radius: 25px;
@@ -179,16 +177,16 @@ body {
 }
 
 .contact-right button:hover {
-  background: #5e00c7;
+  background: #cc0000;
 }
 
 /* Footer */
 .team-footer {
   text-align: center;
   padding: 2rem;
-  background: #090014;
+  background: #440000;
   font-size: 0.9rem;
-  color: #aaa;
+  color: #eee;
 }
 
 /* Mobile Responsive */
