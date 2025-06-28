@@ -8,7 +8,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   background: #0c0018;
-  background: url('gallery/123.png') no-repeat center center fixed;
+  background: url('gallery/923.jpg') no-repeat center center fixed;
   background-size: cover;
   color: white;
   scroll-behavior: smooth;
@@ -149,9 +149,9 @@ body {
 
 /* Footer */
 .team-footer {
-  text-align: center;
+   text-align: center;
   padding: 2rem;
-  background: #090014;
+  background: #3d291e;
   font-size: 0.9rem;
-  color: #aaa;
+  color: white;
 }
