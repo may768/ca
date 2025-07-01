@@ -426,55 +426,6 @@ footer span {
 .dropdown-content a:hover {
   background-color: #3c1a6e;
 }
-/* Explore Dropdown */
-.dropdown {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  z-index: 100;
-}
-
-.explore-btn {
-  display: inline-block;
-  background: white;
-  color: black;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.explore-btn:hover {
-  background: #eee;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 110%;
-  right: 0;
-  background-color: white;
-  min-width: 160px;
-  border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  overflow: hidden;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 0.75rem 1rem;
-  text-decoration: none;
-  display: block;
-  font-weight: 500;
-  transition: background 0.2s;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
 
 .explore-menu:hover .dropdown-content {
   display: block;
