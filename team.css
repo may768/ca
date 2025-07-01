@@ -7,8 +7,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #0c0018;
-  background: url('gallery/923.jpg') no-repeat center center fixed;
+  background: #0c0018 url('gallery/923.jpg') no-repeat center center fixed;
   background-size: cover;
   color: white;
   scroll-behavior: smooth;
@@ -17,46 +16,86 @@ body {
 
 /* Header */
 .team-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 2rem;
+  position: relative;
+  padding: 2rem 2rem 0;
 }
 
-.logo {
-  height: 50px;
+.team-title-wrapper {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.team-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+/* Dropdown Container */
+.dropdown {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: inline-block;
+  z-index: 100;
 }
 
 .explore-btn {
-  color: white;
-  background: transparent;
-  border: 2px solid white;
-  padding: 0.5rem 1rem;
+  display: inline-block;
+  background: white;
+  color: black;
+  padding: 0.6rem 1.2rem;
   border-radius: 8px;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: 500;
+  border: none;
+  cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .explore-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: #eee;
+  color: black;
 }
 
-/* Section Headings */
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Team Section */
 .team-section {
   text-align: center;
-  padding: 4rem 2rem;
-}
-
-.team-section h1 {
-  font-size: 4rem;
-  margin-bottom: 0.5rem;
-}
-
-.subtitle {
-  color: #aaa;
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  padding: 2rem;
 }
 
 /* Zigzag Layout */
@@ -67,38 +106,93 @@ body {
   justify-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 /* Team Member Card */
 .team-member {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1.2rem;
-  border-radius: 15px;
-  text-align: center;
-  width: 90%;
-  max-width: 1000px;
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
   transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 400px;
 }
 
 .team-member:hover {
   transform: translateY(-5px);
 }
 
-.team-member img {
+.photo-wrapper {
+  position: relative;
   width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
   border-radius: 12px;
+}
+
+.photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 0, 20, 0.85);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: bottom 0.4s ease;
+}
+
+.photo-wrapper:hover .overlay {
+  bottom: 0;
+}
+
+.overlay h3 {
+  margin-bottom: 0.3rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.overlay p {
+  font-size: 1rem;
+  color: #ccc;
   margin-bottom: 1rem;
 }
 
-.team-member h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 0.3rem;
+.overlay .icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.team-member p {
-  color: #ccc;
+.overlay .icons a {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  transition: background 0.3s, transform 0.3s;
   font-size: 1rem;
+}
+
+.overlay .icons a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.2);
 }
 
 /* Zig-Zag Offsets */
@@ -109,49 +203,46 @@ body {
 .member5 { grid-column: 1; grid-row: 5; margin-top: 30px; }
 .member6 { grid-column: 2; grid-row: 6; margin-top: 30px; }
 
-/* Social Icons on Hover */
-.photo-wrapper {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  cursor: pointer;
-}
-
-.icons {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  gap: 1rem;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.photo-wrapper:hover .icons {
-  opacity: 1;
-}
-
-.icons a {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  border-radius: 50%;
-  color: white;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: transform 0.3s;
-}
-
-.icons a:hover {
-  transform: scale(1.2);
-  background: rgba(255, 255, 255, 0.2);
-}
-
 /* Footer */
 .team-footer {
-   text-align: center;
+  text-align: center;
   padding: 2rem;
   background: #3d291e;
   font-size: 0.9rem;
   color: white;
+}
+
+/* ✅ Responsive Design (Preserve 2-column on mobile) */
+@media (max-width: 768px) {
+  .team-header {
+    padding: 1.5rem;
+  }
+
+  .team-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .zigzag-layout {
+    grid-template-columns: repeat(2, 1fr); /* KEEP 2-COLUMN on mobile */
+    padding: 0.5rem;
+    gap: 1.2rem;
+  }
+
+  .team-member {
+    max-width: 100%;
+  }
+
+  .dropdown {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .explore-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
 }
