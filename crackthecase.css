@@ -1,0 +1,256 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  color: white;
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url('gallery/923.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 5%;
+  color: white;
+  text-align: left;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 30%, rgba(0,0,0,0.3));
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.logo img {
+  height: 100px;
+}
+
+.logo span {
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.explore-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.explore-btn {
+  background: linear-gradient(90deg, #8f00ff, #5e00c7);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.explore-btn:hover {
+  background: #a560ff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1b0034;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  z-index: 999;
+  border-radius: 6px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #3c1a6e;
+}
+
+.explore-menu:hover .dropdown-content {
+  display: block;
+}
+
+main {
+  margin-top: 4rem;
+  max-width: 600px;
+  z-index: 1;
+}
+
+main h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+main p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.buttons a {
+  padding: 0.9rem 1.6rem;
+  border-radius: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.primary-btn {
+  background: white;
+  color: black;
+}
+
+.secondary-btn {
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 3rem;
+}
+
+footer span {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 0.8rem;
+  transition: opacity 0.2s ease;
+}
+
+.social-icons a:hover {
+  opacity: 0.7;
+}
+
+/* SVG background */
+.background-svg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.background-svg svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Resource Cards */
+.resources-section {
+  background-image: url('gallery/87aaeab0-bb92-48f6-a587-eeef50037954.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.resources-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.resource-box {
+  background: rgba(21, 0, 38, 0.85);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.resource-box:hover {
+  transform: translateY(-5px);
+}
+
+.resource-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.resource-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.action-btn {
+  display: inline-block;
+  background: white;
+  color: black;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.action-btn:hover {
+  background: #ddd;
+  color: black;
+}
