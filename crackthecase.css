@@ -152,8 +152,7 @@ footer span {
   display: block;
 }
 
-
-/* Resource Cards */
+/* RESOURCES SECTION */
 .resources-section {
   background-image: url('gallery/1234.png');
   background-size: cover;
@@ -184,8 +183,12 @@ footer span {
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
   color: #3b1e0f;
+  text-align: left;
 }
 
 .resource-box:hover {
@@ -201,10 +204,11 @@ footer span {
 
 .resource-box p {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   opacity: 0.95;
-  margin-bottom: 1.5rem;
   color: #5c3922;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
 }
 
 .action-btn {
@@ -216,6 +220,7 @@ footer span {
   border-radius: 30px;
   text-decoration: none;
   transition: background 0.3s ease;
+  align-self: flex-start;
 }
 
 .action-btn:hover {
@@ -254,4 +259,17 @@ footer span {
     width: 100%;
     text-align: center;
   }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.resource-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  color: #5c3922;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+  text-align: justify; /* 👈 Add this */
 }
