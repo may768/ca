@@ -8,8 +8,8 @@
 body, html {
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
-  color: white;
-  background-color: #000;
+  color: #eaf2f8;
+  background-color: #0a0f1a;
   overflow-x: hidden;
 }
 
@@ -18,7 +18,7 @@ body, html {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url('gallery/123.png');
+  background-image: url('gallery/chem-hero.png'); /* change to a chemical plant/lab image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,7 +28,7 @@ body, html {
   justify-content: space-between;
   align-items: center;
   padding: 4% 5% 2% 5%;
-  color: white;
+  color: #eaf2f8;
   text-align: center;
   overflow: hidden;
 }
@@ -37,7 +37,7 @@ body, html {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, transparent 30%, rgba(0,0,0,0.3));
+  background: linear-gradient(135deg, transparent 30%, rgba(0, 0, 0, 0.4));
   mix-blend-mode: overlay;
   pointer-events: none;
 }
@@ -66,11 +66,12 @@ header {
 .logo span {
   font-size: 1.1rem;
   line-height: 1.3;
+  color: #9fe2bf;
 }
 
 main {
   margin-top: 2rem;
-  max-width: 600px;
+  max-width: 650px;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -80,12 +81,15 @@ main {
 main h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+  color: #84d4ff;
 }
 
 main p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  color: #cfe2f3;
 }
 
 .buttons {
@@ -102,19 +106,29 @@ main p {
   text-decoration: none;
   font-size: 1rem;
   display: inline-block;
+  transition: background 0.3s ease;
 }
 
 .primary-btn {
-  background: white;
-  color: black;
+  background: #9fe2bf;
+  color: #000;
+}
+
+.primary-btn:hover {
+  background: #7cd1a3;
 }
 
 .secondary-btn {
-  border: 2px solid white;
-  color: white;
+  border: 2px solid #9fe2bf;
+  color: #9fe2bf;
   background: transparent;
 }
 
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Footer */
 footer {
   display: flex;
   justify-content: flex-end;
@@ -126,10 +140,11 @@ footer {
 footer span {
   opacity: 0.8;
   font-size: 0.9rem;
+  color: #e0e0e0;
 }
 
 .social-icons a {
-  color: white;
+  color: #9fe2bf;
   font-size: 1.5rem;
   margin-left: 0.8rem;
   transition: opacity 0.2s ease;
@@ -139,7 +154,7 @@ footer span {
   opacity: 0.7;
 }
 
-/* SVG background */
+/* SVG Background */
 .background-svg {
   position: absolute;
   inset: 0;
@@ -154,19 +169,21 @@ footer span {
 
 /* RESOURCES SECTION */
 .resources-section {
-  background-image: url('gallery/1234.png');
+  background-image: url('gallery/lab-notes-bg.png'); /* Change to a chemical lab sketch or notes */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   padding: 4rem 2rem;
   text-align: center;
-  color: #3b1e0f;
+  color: white;
+  background-color: #0f111a;
 }
 
 .resources-section h2 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   margin-bottom: 2rem;
-  color: white;
+  color: #7cd1a3;
+  font-family: 'Georgia', serif;
 }
 
 .resources-grid {
@@ -178,17 +195,18 @@ footer span {
 }
 
 .resource-box {
-  background: rgba(250, 240, 230, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 400px;
-  color: #3b1e0f;
+  color: #1a1a1a;
   text-align: left;
+  border-left: 5px solid #009688;
 }
 
 .resource-box:hover {
@@ -196,25 +214,26 @@ footer span {
 }
 
 .resource-box h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 0.8rem;
   letter-spacing: 1px;
-  color: #4a2610;
+  color: #003d33;
 }
 
 .resource-box p {
   font-size: 1rem;
   line-height: 1.6;
   opacity: 0.95;
-  color: #5c3922;
+  color: #333;
   flex-grow: 1;
   margin-bottom: 1.5rem;
+  text-align: justify;
 }
 
 .action-btn {
   display: inline-block;
-  background: white;
-  color: black;
+  background: #009688;
+  color: white;
   font-weight: bold;
   padding: 0.6rem 1.2rem;
   border-radius: 30px;
@@ -224,26 +243,26 @@ footer span {
 }
 
 .action-btn:hover {
-  background: #ddd;
-  color: black;
+  background: #00796b;
+  color: white;
 }
 
 /* Responsive Tweaks */
 @media screen and (max-width: 768px) {
   .logo img {
-    height: 140px;
+    height: 120px;
   }
 
   .logo span {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
-  .main {
+  main {
     margin-top: 1rem;
   }
 
   main h1 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 
   main p {
@@ -263,13 +282,4 @@ footer span {
   .resources-grid {
     grid-template-columns: 1fr;
   }
-}
-.resource-box p {
-  font-size: 1rem;
-  line-height: 1.6;
-  opacity: 0.95;
-  color: #5c3922;
-  flex-grow: 1;
-  margin-bottom: 1.5rem;
-  text-align: justify; /* 👈 Add this */
 }
