@@ -7,23 +7,22 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: url('gallery/923.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background: linear-gradient(to right, #004e92, #000428); /* vibrant blue gradient */
   color: white;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-/* Optional overlay for contrast */
+/* Decorative Glow */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 40, 0.3);
   z-index: -1;
 }
 
-/* Contact Section Layout */
+/* Container */
 .contact-container {
   max-width: 1200px;
   margin: 4rem auto;
@@ -31,49 +30,57 @@ body::before {
   color: white;
 }
 
+/* Title */
 .contact-title {
   text-align: center;
   font-size: 2.8rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  position: relative;
+  color: #00e5ff;
+  
 }
 
 .contact-title::after {
   content: "";
   display: block;
-  width: 80px;
+  width: 90px;
   height: 4px;
-  background: white;
+  background: #00e5ff;
   margin: 0.5rem auto;
   border-radius: 2px;
 }
 
+/* Subtitle */
 .contact-subtitle {
   text-align: center;
-  color: white;
+  color: #b2ebf2;
   margin-bottom: 3rem;
   font-size: 1.15rem;
   font-weight: 500;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 255, 255, 0.3);
 }
 
-/* Main Box Container */
+/* Box */
 .contact-box {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  background: rgba(92, 64, 51, 0.95); /* Dark Brown with slight transparency */
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 2rem;
   border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
 }
 
-/* Left and Right Panels */
-.contact-left, .contact-right {
+/* Panels */
+.contact-left,
+.contact-right {
   flex: 1 1 400px;
-  background: rgba(78, 52, 38, 0.92); /* Deeper brown shade */
+  background: rgba(0, 100, 255, 0.2);
   padding: 2rem;
   border-radius: 12px;
+  border: 1px solid #00bcd470;
 }
 
 /* Headings */
@@ -81,29 +88,30 @@ body::before {
 .contact-right h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: white;
+  color: #a7ffff;
 }
 
-/* Contact Details */
+/* Info */
 .contact-left p {
   margin-bottom: 1.2rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 0.95rem;
 }
 
 .contact-left i {
-  color: white;
+  color: #00e5ff;
 }
 
 .contact-left a {
-  color: white;
+  color: #ccffff;
   text-decoration: none;
 }
 
-/* Social Icons with native brand colors */
+/* Socials */
 .socials {
-  margin: 1.5rem 0 1rem 0;
+  margin-top: 1.5rem;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -112,37 +120,23 @@ body::before {
 .socials a {
   font-size: 1.2rem;
   color: white;
-  padding: 0.7rem;
+  
+  padding: 0.6rem;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.socials a:hover {
-  transform: scale(1.1);
-}
 
-.socials a[aria-label="Instagram"] {
-  background: #E1306C;
-}
-.socials a[aria-label="LinkedIn"] {
-  background: #0077b5;
-}
-.socials a[aria-label="youtube"] {
-  background: #FF0000;
-}
-.socials a[aria-label="twitter"] {
-  background: #1DA1F2;
-}
 
-/* Map Styling */
+/* Map */
 .contact-left h3 {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  font-size: 1.2rem;
-  color: white;
+  font-size: 1.1rem;
+  color: #c2f0ff;
 }
 
 .contact-left iframe {
@@ -152,7 +146,7 @@ body::before {
   border-radius: 10px;
 }
 
-/* Form Styling */
+/* Form */
 .contact-right form {
   display: flex;
   flex-direction: column;
@@ -172,11 +166,18 @@ body::before {
 .contact-right textarea {
   width: 100%;
   padding: 0.9rem;
-  background: #5C4033; /* Brown */
-  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #00e5ff;
   border-radius: 8px;
   color: white;
   font-size: 1rem;
+}
+
+.contact-right input:focus,
+.contact-right textarea:focus {
+  outline: none;
+  border-color: #1de9b6;
+  box-shadow: 0 0 10px #1de9b6;
 }
 
 .contact-right textarea {
@@ -184,40 +185,41 @@ body::before {
   min-height: 120px;
 }
 
+/* Button */
 .contact-right button {
   padding: 1rem;
-  background: white;
-  color: #5C4033;
+  background: linear-gradient(to right, #00e5ff, #1de9b6);
+  color: #001d33;
   border: none;
   border-radius: 25px;
   font-weight: bold;
-  cursor: pointer;
   font-size: 1rem;
-  transition: background 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .contact-right button:hover {
-  background: #f1e7e2;
-  color: #3d291e;
+  background: #ffffff;
+  color: #005577;
 }
 
 /* Footer */
 .team-footer {
   text-align: center;
   padding: 2rem;
-  background: #3d291e;
+  background: #002b44;
   font-size: 0.9rem;
-  color: white;
+  color: #b2ebf2;
 }
 
-/* Mobile Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .form-row {
     flex-direction: column;
   }
 
   .contact-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .contact-subtitle {
@@ -234,20 +236,8 @@ body::before {
   }
 }
 
-/* Placeholder Text - White */
+/* Placeholder */
 ::placeholder {
-  color: white;
+  color: #e0f7fa;
   opacity: 1;
-}
-
-/* Placeholder Compatibility */
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder,
-input::-moz-placeholder,
-textarea::-moz-placeholder,
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder,
-input::-ms-input-placeholder,
-textarea::-ms-input-placeholder {
-  color: white;
 }
