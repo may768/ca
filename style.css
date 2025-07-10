@@ -644,26 +644,20 @@ body, html {
   font-size: 2.5rem;
   color: #3EE1C1;
   margin-bottom: 1rem;
-  line-height: 1.3;
-  text-align: left; /* ✅ FIX: Use left instead of justify */
 }
-
 
 .who-we-are-text p {
   font-size: 1rem;
   line-height: 1.6;
   color: #e0f7f5;
   margin-bottom: 1.5rem;
-  text-align: justify; /* ✅ this aligns both sides */
 }
 
 .activities {
   list-style: none;
   padding-left: 0;
   margin-bottom: 2rem;
-  text-align: justify; /* ✅ optional: for uniform list alignment */
 }
-
 
 .activities li {
   margin-bottom: 0.75rem;
