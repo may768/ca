@@ -609,3 +609,73 @@ body, html {
 .hero::before, .background, .background-svg {
   display: none;
 }
+.who-we-are {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.who-we-are-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.who-we-are-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.who-we-are-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+}
+
+.who-we-are-text {
+  flex: 1 1 500px;
+}
+
+.who-we-are-text h2 {
+  font-size: 2.5rem;
+  color: #3EE1C1;
+  margin-bottom: 1rem;
+}
+
+.who-we-are-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0f7f5;
+  margin-bottom: 1.5rem;
+}
+
+.activities {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.activities li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #9af3e4;
+}
+
+.read-more-button {
+  display: inline-block;
+  background-color: #3EE1C1;
+  color: #1F2A44;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.read-more-button:hover {
+  background-color: #29bea8;
+}
