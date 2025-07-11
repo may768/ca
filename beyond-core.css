@@ -1,0 +1,97 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #05091c, #002940, #0f3c52);
+  color: #eaf2f8;
+  scroll-behavior: smooth;
+  background-attachment: fixed;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  background: linear-gradient(to right, #051937, #004d7a);
+  border-bottom: 2px solid #00e89a;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #00e89a;
+  font-family: 'Georgia', serif;
+  text-shadow: 0 0 10px #00e89a55;
+}
+
+.hero p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #b3ffe3;
+}
+
+/* Grid Section */
+.noncore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.noncore-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 5px solid #00e89a;
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 255, 165, 0.05);
+}
+
+.noncore-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px rgba(0, 255, 165, 0.2);
+}
+
+.noncore-card h3 {
+  color: #4CC9F0;
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.noncore-card p {
+  color: #d0f5ff;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #9fe2bf;
+  background-color: #05091c;
+  border-top: 1px solid #00e89a;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .noncore-card {
+    padding: 1.5rem;
+  }
+}
